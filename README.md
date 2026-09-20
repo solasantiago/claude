@@ -4,8 +4,8 @@ Curso personal, en formato de apunte incremental, para aprender a usar Claude
 Code como asistente de desarrollo — desde la extensión de VS Code hasta la
 terminal de Ubuntu.
 
-**El contenido completo del curso vive en la carpeta [`docs/`](docs/index.md)**
-y se publica como sitio navegable (MkDocs Material) vía GitHub Pages en
+**El contenido completo del curso vive en la carpeta [`docs/`](docs/intro.md)**
+y se publica como sitio navegable (Docusaurus) vía GitHub Pages en
 `https://solasantiago.github.io/claude/` una vez que se complete el setup del
 [Módulo 6](docs/modulo-6.md).
 
@@ -13,7 +13,7 @@ y se publica como sitio navegable (MkDocs Material) vía GitHub Pages en
 
 - [x] [Módulo 0 — Setup del repo](docs/modulo-0.md)
 - [x] [Módulo 1 — Qué es Claude Code: extensión de VS Code vs. terminal](docs/modulo-1.md)
-- [ ] Módulo 2 — Mejores prácticas de uso (prompting, modos de permiso, Plan Mode)
+- [x] [Módulo 2 — Mejores prácticas de uso (prompting, modos de permiso, Plan Mode)](docs/modulo-2.md)
 - [ ] Módulo 3 — Memoria de proyecto: CLAUDE.md y memoria automática
 - [ ] Módulo 4 — CLAUDE.md exportable para trabajo colaborativo
 - [ ] Módulo 5 — Buenas prácticas de repositorio personal (git, estructura, commits)
@@ -22,13 +22,11 @@ y se publica como sitio navegable (MkDocs Material) vía GitHub Pages en
 ## Ver el sitio en local
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-mkdocs serve
+npm install
+npm start
 ```
 
-Abre `http://127.0.0.1:8000`.
+Abre `http://localhost:3000`.
 
 ## Memoria de proyecto
 
