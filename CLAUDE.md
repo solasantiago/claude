@@ -12,14 +12,21 @@ de Claude como asistente en un proyecto real. El "proyecto real" es este mismo
 repositorio: se aprende haciendo, y cada cosa que se prueba o se decide queda
 documentada en el README como si fuera una clase.
 
-- **README.md**: el apunte del curso. Tiene un índice de módulos al principio
-  (checklist) y después el desarrollo de cada módulo, en orden secuencial. Se
-  completa incrementalmente: un módulo se da por cerrado recién cuando su
-  sección en el README está escrita.
+- **`docs/`**: el apunte del curso propiamente dicho, un archivo `.md` por
+  módulo (`modulo-0.md`, `modulo-1.md`, ...) más `docs/index.md` con el
+  índice. Es la fuente que MkDocs Material convierte en sitio estático.
+- **README.md**: portada corta del repo en GitHub — resumen, link al sitio
+  publicado, índice de módulos con checklist, e instrucciones para correr el
+  sitio en local. No repite el contenido de cada módulo, eso vive en `docs/`.
+- **mkdocs.yml**: configuración del sitio (tema Material, navegación).
 - **CLAUDE.md** (este archivo): memoria de proyecto para Claude. No es apunte
   para el usuario — son las reglas de trabajo y el estado de avance, para que
   cualquier sesión nueva (con o sin memoria automática) pueda retomar sin
   perder contexto.
+
+Un módulo se da por cerrado cuando existe su `docs/modulo-N.md`, está linkeado
+desde `docs/index.md` y desde el índice del README, y agregado al `nav:` de
+`mkdocs.yml`.
 
 ## Reglas de trabajo en este repo
 
@@ -51,7 +58,15 @@ documentada en el README como si fuera una clase.
 - [ ] Módulo 4 — CLAUDE.md exportable para trabajo colaborativo.
 - [ ] Módulo 5 — Buenas prácticas de repositorio personal (git, estructura,
       commits).
-- [ ] Módulo 6 — Publicar en GitHub y flujo de trabajo final.
+- [x] Módulo 6 — Publicar en GitHub y flujo de trabajo final: se armó MkDocs
+      Material (`mkdocs.yml`, `docs/`, `.venv` local gitignoreado,
+      `requirements.txt`) y el workflow `.github/workflows/docs.yml` que hace
+      `mkdocs gh-deploy` en cada push a `main`. **Falta que el usuario**: (1)
+      resolver auth SSH/HTTPS a GitHub, (2) hacer el primer `git push`, (3)
+      habilitar GitHub Pages en Settings → Pages apuntando a la rama
+      `gh-pages`. Detalle paso a paso en `docs/modulo-6.md`.
+      Se adelantó este módulo fuera de orden porque el usuario pidió probar
+      GitHub Pages en esta sesión; los Módulos 2 a 5 siguen pendientes.
 
 ## Pendientes conocidos (no resolver salvo que el usuario lo pida)
 
